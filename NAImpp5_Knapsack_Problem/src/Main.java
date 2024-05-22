@@ -16,9 +16,19 @@ public class Main {
             dataFile = new File(dataPath);
         }
         Scanner dataFileScanner = new Scanner(dataFile);
-        String backpackData = dataFileScanner.nextLine();
-        String[] backpackDataArr = backpackData.split(" ");
-        int backpackCapacity = Integer.parseInt(backpackDataArr[0]);
-        int numberOfItems = Integer.parseInt(backpackDataArr[1]);
+        String dataString = dataFileScanner.nextLine();
+        String[] dataArr = dataString.split(" ");
+        int backpackCapacity = Integer.parseInt(dataArr[0]);
+        int numberOfItems = Integer.parseInt(dataArr[1]);
+
+        int[] values = new int[numberOfItems];
+        dataString = dataFileScanner.nextLine();
+        dataArr = dataString.split(",");
+        for (int i = 0; i < dataArr.length; i++) {
+            values[i] = Integer.parseInt(dataArr[i]);
+        }
+
+        System.out.println(Arrays.toString(values));
+
     }
 }
