@@ -28,7 +28,12 @@ public class Main {
             itemsValues[i] = Integer.parseInt(dataArr[i]);
         }
 
-        System.out.println(Arrays.toString(itemsValues));
+        int[] itemsWeights = new int[numberOfItems];
+        dataString = dataFileScanner.nextLine();
+        dataArr = dataString.split(",");
+        for (int i = 0; i < dataArr.length; i++) {
+            itemsWeights[i] = Integer.parseInt(dataArr[i]);
+        }
 
     }
 }
