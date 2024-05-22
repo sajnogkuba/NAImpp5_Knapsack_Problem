@@ -21,14 +21,14 @@ public class Main {
         int backpackCapacity = Integer.parseInt(dataArr[0]);
         int numberOfItems = Integer.parseInt(dataArr[1]);
 
-        int[] values = new int[numberOfItems];
+        int[] itemsValues = new int[numberOfItems];
         dataString = dataFileScanner.nextLine();
         dataArr = dataString.split(",");
         for (int i = 0; i < dataArr.length; i++) {
-            values[i] = Integer.parseInt(dataArr[i]);
+            itemsValues[i] = Integer.parseInt(dataArr[i]);
         }
 
-        System.out.println(Arrays.toString(values));
+        System.out.println(Arrays.toString(itemsValues));
 
     }
 }
